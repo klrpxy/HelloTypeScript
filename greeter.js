@@ -1,7 +1,6 @@
 "use strict";
-function greeter(person) {
-    return "Hello, " + person;
+function gretter(person) {
+    return `Hello, ${person.firstName} ${person.lastName}`;
 }
-// let user = "Jane User";
-let user = [1, 2, 3];
-document.body.innerHTML = greeter(user);
+let user = { firstName: "Jame", lastName: "User" };
+document.body.innerHTML = gretter(user);

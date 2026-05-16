@@ -1,8 +1,14 @@
-function greeter(person: string) { 
-    return "Hello, " + person;
+// TypeScript 中对象实现接口时只需包含接口要求的结构即可，不必明确显示实现。
+
+interface Person {
+    firstName: string;
+    lastName: string;
 }
 
-let user = "Jane User";
-// let user = [1, 2, 3]; // 会编译错误
+function gretter(person: Person) {
+    return `Hello, ${person.firstName} ${person.lastName}`;
+}
 
-document.body.innerHTML = greeter(user);
+let user = { firstName: 'Jame', lastName: 'User' };
+
+document.body.innerHTML = gretter(user);
