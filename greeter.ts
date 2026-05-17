@@ -23,3 +23,19 @@ function greeter(person: Person) {
 let user = new Student('Jame', 'M.', 'User');
 
 document.body.innerHTML = greeter(user);
+
+class Apple {
+    name: string = '';
+}
+class Desk {
+    height: number = 0;
+}
+
+let master: Apple & Desk;
+
+master = {
+    name: 'sd',
+    height: 123,
+};
+
+console.log(master);

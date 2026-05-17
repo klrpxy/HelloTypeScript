@@ -1,5 +1,5 @@
 "use strict";
-// TypeScript 中对象实现接口时只需包含接口要求的结构即可，不必明确显示实现。
+// TypeScript 类构造器的入参支持添加public来声明为类成员
 class Student {
     firstName;
     middleInitial;
@@ -17,3 +17,15 @@ function greeter(person) {
 }
 let user = new Student('Jame', 'M.', 'User');
 document.body.innerHTML = greeter(user);
+class Apple {
+    name = '';
+}
+class Desk {
+    height = 0;
+}
+let master;
+master = {
+    name: 'sd',
+    height: 123,
+};
+console.log(master);
